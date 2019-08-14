@@ -21,7 +21,7 @@ class App extends React.Component{
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "contact", ...this.state })
+          body: encode({ "react-netlify-form": "contact", ...this.state })
         })
           .then(() => alert("Success!"))
           .catch(error => alert(error));
@@ -39,7 +39,7 @@ class App extends React.Component{
         <header className="App-header">  
   
   
-        <form onSubmit={this.handleSubmit}>
+        <form name="react-netlify-form" onSubmit={this.handleSubmit}>
             <p>
               <label>
                 Please enter your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
