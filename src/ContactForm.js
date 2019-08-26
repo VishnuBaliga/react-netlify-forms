@@ -31,8 +31,8 @@ const encode = (data) => {
     render() {
       const { name, email, message, address } = this.state;
       return (
-        <form name="contact"  netlify="true" onSubmit={this.handleSubmit}>
-            <input type="hidden" name="new1" value="contact" />
+        <form name="new1"  netlify="true" onSubmit={this.handleSubmit}>
+            <input type="hidden" name="new1" value="new1" />
           <p>
             <label>
               Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
