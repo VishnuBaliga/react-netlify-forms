@@ -18,7 +18,7 @@ const encode = (data) => {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...this.state })
+        body: encode({ "form-name": "new1", ...this.state })
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
