@@ -9,7 +9,7 @@ const encode = (data) => {
   class ContactForm extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { name: "", email: "", message: "" };
+      this.state = { name: "", email: "", message: "", address: "" };
     }
 
     /* Here’s the juicy bit for posting the form submission */
@@ -31,7 +31,7 @@ const encode = (data) => {
     render() {
       const { name, email, message } = this.state;
       return (
-        <form name="contact" netlify onSubmit={this.handleSubmit}>
+        <form name="contact"  netlify="true" onSubmit={this.handleSubmit}>
             <input type="hidden" name="contact" value="contact-form" />
           <p>
             <label>
@@ -46,6 +46,11 @@ const encode = (data) => {
           <p>
             <label>
               Message: <textarea name="message" value={message} onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              address: <textarea name="address" value={address} onChange={this.handleChange} />
             </label>
           </p>
           <p>
